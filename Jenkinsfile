@@ -11,7 +11,7 @@ pipeline {
         stage('Example Test') {
            
             steps {
-                echo 'Hello, JDK'
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'git@github.com:SheikHussain/PipelineJ.git']]])
                 sh 'java -version'
             }
         }
