@@ -8,6 +8,14 @@ pipeline {
                 
             }
         }
+        stage('Git Clone') {
+      
+            steps {
+                echo 'Try adding git repo url here '
+                sh ' git repo url '
+                
+            }
+        }
         stage('Example Test') {
            
             steps {
